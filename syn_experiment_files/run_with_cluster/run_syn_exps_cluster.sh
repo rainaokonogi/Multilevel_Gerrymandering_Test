@@ -20,7 +20,7 @@ for random_seed in {1..5}; do
                             --time=4-00:00:00 \
                             --error="syn_exps_${num_r_units}_${map_number}_${block_size}_${experiment_type}_${init_part}_${random_seed}.log" \
                             --output="syn_output_${num_r_units}_${map_number}_${block_size}_${experiment_type}_${init_part}_${random_seed}.out" \
-                            --wrap="PATHONHASHSEED=0 uv run ${TOP_DIR}/syn_exp_cli.py --num-r-units $num_r_units --map-number $map_number --block-size $block_size --experiment-type $experiment_type --init-part $init_part --random-seed $random_seed --total-steps 20000"
+                            --wrap="PATHONHASHSEED=0 uv run ${TOP_DIR}/syn_exps_cli.py --num-r-units $num_r_units --map-number $map_number --block-size $block_size --experiment-type $experiment_type --init-part $init_part --random-seed $random_seed --total-steps 20000"
                     done
                 done
             done
