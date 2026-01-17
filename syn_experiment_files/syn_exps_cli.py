@@ -46,7 +46,7 @@ from syn_file_NN import run_experiment_nn
     help="Number of districting plans per building block graph",
 )
 def main(
-    num_r_units, map_number, block_size, experiment_type, random_seed, total_steps
+    num_r_units, map_number, block_size, experiment_type, init_part, random_seed, total_steps
 ):
     if experiment_type == "GG":
         run_experiment_gg(num_r_units, map_number, block_size, init_part, random_seed, total_steps)
