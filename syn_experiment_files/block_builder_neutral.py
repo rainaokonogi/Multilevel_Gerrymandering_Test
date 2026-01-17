@@ -104,7 +104,7 @@ def main():
 
             # Save building block file
             save_to_file = (
-                f"{SCRIPT_DIR}/../syn_files/syn_building_block_partitions2/neutral/"
+                f"{SCRIPT_DIR}/../syn_files/syn_building_block_partitions/neutral/"
                 f"/block_size_{block_size}/sample_{i+1}.json"
             )
             os.makedirs(os.path.dirname(save_to_file), exist_ok=True)
