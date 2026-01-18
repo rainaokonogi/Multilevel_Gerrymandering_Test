@@ -16,8 +16,8 @@ for random_seed in {1..5}; do
                 --cpus-per-task=2 \
                 --mem=2G \
                 --time=4-00:00:00 \
-                --error="NY_neutral_exps_${block_type}_part_${init_part}_seed_${random_seed}.log" \
-                --output="NY_neutral_exps_${block_type}_part_${init_part}_seed_${random_seed}.out" \
+                --error="NY_error_files/NY_neutral_exps_${block_type}_part_${init_part}_seed_${random_seed}.log" \
+                --output="NY_output_files/NY_neutral_exps_${block_type}_part_${init_part}_seed_${random_seed}.out" \
                 --wrap="PYTHONHASHSEED=0 uv run ${TOP_DIR}/NY_neutral_exps_cli.py --block-type $block_type --init-part $init_part --random-seed $random_seed --total-steps 1000000"
         done
     done

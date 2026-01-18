@@ -29,8 +29,8 @@ def NY_neutral_exp(block_type, init_part, random_seed, total_steps):
 
     # Load dual graph
     dual_graph_info = (
-        f"{SCRIPT_DIR}/NY_dual_graphs/connected_dual_graphs_with_initial_partitions/
-        conn_{block_type}_dual_graph_init_parts.json"
+        f"{SCRIPT_DIR}/NY_dual_graphs/connected_dual_graphs_with_initial_partitions/"
+        f"conn_{block_type}_dual_graph_init_parts.json"
     )
 
     dual_graph = Graph.from_json(dual_graph_info)
@@ -38,10 +38,10 @@ def NY_neutral_exp(block_type, init_part, random_seed, total_steps):
     # For use later when saving results
     graph_node_order = list(dual_graph.nodes)
 
-    save_assignment_results_to = f"{SCRIPT_DIR}/../NY_output_ensembles/{block_type}/neutral/
-                                init_part_{init_part}_random_seed_{random_seed}_burst_length_20_{total_steps}_steps_assignment.ben"
-    save_updaters_results_to = f"{SCRIPT_DIR}/../NY_output_ensembles/{block_type}/neutral/
-                                init_part_{init_part}_random_seed_{random_seed}_burst_length_20_{total_steps}_steps_updaters.jsonl"
+    save_assignment_results_to = f"{SCRIPT_DIR}/../NY_output_ensembles/{block_type}/neutral/"
+                                f"init_part_{init_part}_random_seed_{random_seed}_burst_length_20_{total_steps}_steps_assignment.ben"
+    save_updaters_results_to = f"{SCRIPT_DIR}/../NY_output_ensembles/{block_type}/neutral/"
+                                f"init_part_{init_part}_random_seed_{random_seed}_burst_length_20_{total_steps}_steps_updaters.jsonl"
     os.makedirs(os.path.dirname(save_assignment_results_to), exist_ok=True)
     os.makedirs(os.path.dirname(save_updaters_results_to), exist_ok=True)
 

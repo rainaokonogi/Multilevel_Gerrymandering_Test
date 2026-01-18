@@ -19,9 +19,9 @@ for random_seed in {1..5}; do
                         --cpus-per-task=2 \
                         --mem=2G \
                         --time=4-00:00:00 \
-                        --error="NY_gerry_exps_${block_type}_${election}_${party}_part_${init_part}_seed_${random_seed}.log" \
-                        --output="NY_gerry_exps_${block_type}_${election}_${party}_part_${init_part}_seed_${random_seed}.out" \
-                        --wrap="PYTHONHASHSEED=0 uv run ${TOP_DIR}/NY_exps_cli.py --block-type $block_type --election $election --party $party --init-part $init_part --random-seed $random_seed --total-steps 1000000"
+                        --error="NY_error_files/NY_gerry_exps_${block_type}_${election}_${party}_part_${init_part}_seed_${random_seed}.log" \
+                        --output="NY_output_files/NY_gerry_exps_${block_type}_${election}_${party}_part_${init_part}_seed_${random_seed}.out" \
+                        --wrap="PYTHONHASHSEED=0 uv run ${TOP_DIR}/NY_gerry_exps_cli.py --block-type $block_type --election $election --party $party --init-part $init_part --random-seed $random_seed --total-steps 1000000"
                 done
             done
         done
