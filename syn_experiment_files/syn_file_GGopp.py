@@ -34,7 +34,7 @@ def safe_reward_partial_dist(part, minority_perc_col, threshold):
         )
 
 
-def run_experiment_gg(num_r_units, map_number, block_size, init_part, random_seed, total_steps):
+def run_experiment_ggopp(num_r_units, map_number, block_size, init_part, random_seed, total_steps):
     """Run gerrymandering experiment where both the building blocks and resulting map are gerrymandered.
 
     Args:

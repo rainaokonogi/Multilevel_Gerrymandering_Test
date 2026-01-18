@@ -80,7 +80,7 @@ def run_experiment_gg(num_r_units, map_number, block_size, init_part, random_see
             "D_tally": updaters.Tally("D", alias="D_tally"),
         }
 
-        init_part = Partition(
+        initial_partition = Partition(
             block_graph, assignment=f"init_part_{init_part}", updaters=my_updaters
         )
 
@@ -96,10 +96,10 @@ def run_experiment_gg(num_r_units, map_number, block_size, init_part, random_see
             proposal=proposal,
             constraints=[contiguous],
             threshold=0.5,
-            initial_state=init_part,
+            initial_state=initial_partition,
             total_pop_col="population",
             minority_pop_col="D_tally",
-            score_function=safe_reward_partial_dist,
+            score_function=safe_reward_partial_dist
         )
 
         with (

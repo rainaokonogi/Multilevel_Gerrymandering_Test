@@ -3,6 +3,7 @@ from syn_file_GG import run_experiment_gg
 from syn_file_NG import run_experiment_ng
 from syn_file_GN import run_experiment_gn
 from syn_file_NN import run_experiment_nn
+from syn_file_GGopp import run_experiment_ggopp
 
 # Add the choice type to everything.
 @click.command()

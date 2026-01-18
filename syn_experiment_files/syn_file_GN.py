@@ -63,7 +63,7 @@ def run_experiment_gn(num_r_units, map_number, block_size, init_part, random_see
             }
 
         # Pull initial partition for block graph
-        init_part = Partition(
+        initial_partition = Partition(
             block_graph,
             assignment=f"init_part_{init_part}",
             updaters=my_updaters
@@ -82,7 +82,7 @@ def run_experiment_gn(num_r_units, map_number, block_size, init_part, random_see
         recom_chain = MarkovChain(
             proposal=proposal,
             constraints=[contiguous],
-            initial_state=init_part,
+            initial_state=initial_partition,
             accept=always_accept,
             total_steps=total_steps
         )
