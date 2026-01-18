@@ -15,7 +15,7 @@ SCRIPT_DIR = os.path.dirname(SCRIPT_FILE_PATH)
 
 # Block_type indicates whether using block groups, VTDs, or tracts as underlying blocks
 # Election/party indicate what data we're using to do the gerrymandering
-def NY_gerry_exp(block_type, election, party, init_part, random_seed, total_steps):
+def NY_neutral_exp(block_type, init_part, random_seed, total_steps):
     """Runs 
 
     Args:
