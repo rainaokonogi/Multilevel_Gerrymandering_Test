@@ -1,14 +1,3 @@
-#!/bin/bash 
-#SBATCH --job-name=add-init-parts
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --partition=duchin
-#SBATCH --cpus-per-task=2
-#SBATCH --mem=4G
-#SBATCH --time=7-00:00:00
-#SBATCH --error=init_parts_error.log
-#SBATCH --output=init_parts_output.out
-
 #!/usr/bin/env bash
 
 echo "started"
@@ -27,7 +16,7 @@ for block_set in "gerry" "neutral"; do
         --partition=duchin \
         --cpus-per-task=2 \
         --mem=2G \
-        --time=1-00:00:00 \
+        --time=2-00:00:00 \
         --error="init_parts_${block_set}.log" \
         --output="init_parts_${block_set}.out" \
         --wrap="PYTHONHASHSEED=0 uv run $SCRIPT"
