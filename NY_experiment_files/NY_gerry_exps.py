@@ -1,6 +1,6 @@
 from gerrychain import Partition, Graph, updaters, Election
 from gerrychain.proposals import recom
-from gerrychain.tree import recursive_tree_part, bipartition_tree
+from gerrychain.tree import bipartition_tree
 from gerrychain.constraints import contiguous
 from gerrychain.optimization import Gingleator
 from functools import partial
@@ -8,7 +8,6 @@ import random
 import jsonlines as jl
 import os
 from pyben import PyBenEncoder
-import networkx as nx
 import json
 
 SCRIPT_FILE_PATH = os.path.abspath(__file__)
@@ -108,7 +107,7 @@ def NY_gerry_exp(block_type, election, party, init_part, random_seed, total_step
         }
 
     initial_partition = Partition(
-        graph,
+        dual_graph,
         assignment=f"init_part_{init_part}",
         updaters=my_updaters
     )
