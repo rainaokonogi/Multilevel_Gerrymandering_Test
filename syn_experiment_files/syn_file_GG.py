@@ -104,7 +104,7 @@ def run_experiment_gg(num_r_units, map_number, block_size, init_part, random_see
 
         with (
             PyBenEncoder(save_assignment_results_to, overwrite=True) as encoder,
-            jl.open(save_updaters_results_to, "w") as updater_output_file,
+            jl.open(save_updaters_results_to, "w") as updater_output_file
         ):
 
             for i, plan in enumerate(
