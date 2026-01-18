@@ -38,7 +38,7 @@ from NY_gerry_exps import NY_gerry_exp
 def main(
     block_type, election, party, init_part, random_seed, total_steps
 ):
-    gerry_real_exp(block_type, election, party, init_part, random_seed, total_steps)
+    NY_gerry_exp(block_type, election, party, init_part, random_seed, total_steps)
 
 
 if __name__ == "__main__":

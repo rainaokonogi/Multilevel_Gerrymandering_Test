@@ -30,7 +30,7 @@ from NY_neutral_exps import NY_neutral_exp
 def main(
     block_type, init_part, random_seed, total_steps
 ):
-    gerry_real_exp(block_type, init_part, random_seed, total_steps)
+    NY_neutral_exp(block_type, init_part, random_seed, total_steps)
 
 
 if __name__ == "__main__":
