@@ -26,7 +26,7 @@ from syn_file_GGopp import run_experiment_ggopp
 @click.option("--experiment-type",
     prompt="Experiment type? (GG, NG, GN, or NN)",
     help="",
-    type=click.Choice(["GG", "GN", "NG", "NN"])
+    type=click.Choice(["GG", "GN", "NG", "NN","GGopp"])
 )
 @click.option(
     "--init-part",
@@ -58,7 +58,7 @@ def main(
     elif experiment_type == "NN":
         run_experiment_nn(num_r_units, map_number, block_size, init_part, random_seed, total_steps)
     elif experiment_type == "GGopp":
-        run_experiment_nn(num_r_units, map_number, block_size, init_part, random_seed, total_steps)
+        run_experiment_ggopp(num_r_units, map_number, block_size, init_part, random_seed, total_steps)
 
 if __name__ == "__main__":
     main()

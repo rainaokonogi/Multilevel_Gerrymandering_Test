@@ -53,11 +53,11 @@ def run_experiment_ggopp(num_r_units, map_number, block_size, init_part, random_
     for sample in range(1, 101):
 
         save_assignment_results_to = (
-            f"{SCRIPT_DIR}/../output_ensembles/GG/r_units_{num_r_units}_map_{map_number}/block_size_{block_size}/"
+            f"{SCRIPT_DIR}/../output_ensembles/GGopp/r_units_{num_r_units}_map_{map_number}/block_size_{block_size}/"
             f"sample_{sample}/init_part_{init_part}_random_seed_{random_seed}_burst_length_20_steps_{total_steps}_assignment.ben"
         )
         save_updaters_results_to = (
-            f"{SCRIPT_DIR}/../output_stats/GG/r_units_{num_r_units}_map_{map_number}/block_size_{block_size}/"
+            f"{SCRIPT_DIR}/../output_stats/GGopp/r_units_{num_r_units}_map_{map_number}/block_size_{block_size}/"
             f"sample_{sample}/init_part_{init_part}_random_seed_{random_seed}_burst_length_20_steps_{total_steps}_updaters.jsonl"
         )
         os.makedirs(os.path.dirname(save_assignment_results_to), exist_ok=True)
